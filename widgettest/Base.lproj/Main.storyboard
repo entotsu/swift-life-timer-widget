@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xq4-DS-S0m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OFW-yS-GdD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
@@ -51,12 +51,95 @@
                     <view key="view" contentMode="scaleToFill" id="HkA-Zw-715">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zgh-jl-1ef">
+                                <rect key="frame" x="0.0" y="219" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="430854438.50339597">
+                                    <!--2014-08-27 17:47:18 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub2-ML-NKo">
+                                <rect key="frame" x="208" y="422" width="185" height="83"/>
+                                <color key="backgroundColor" red="0.65490198135375977" green="0.85098046064376831" blue="0.16862745583057404" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="45"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapButton:" destination="Xq4-DS-S0m" eventType="touchUpInside" id="K2O-vy-xFw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="j7h-1j-AjU">
+                                <rect key="frame" x="163" y="40" width="275" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="FAd-up-pdM"/>
+                                    <constraint firstAttribute="height" constant="128" id="Qad-9P-I1J"/>
+                                </constraints>
+                                <string key="text">Please select
+your birthday.</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="j7h-1j-AjU" secondAttribute="centerX" id="37b-Kt-qDn"/>
+                            <constraint firstItem="j7h-1j-AjU" firstAttribute="centerX" secondItem="zgh-jl-1ef" secondAttribute="centerX" id="6N0-Mn-a6r"/>
+                            <constraint firstItem="j7h-1j-AjU" firstAttribute="centerX" secondItem="7Gg-bj-fV2" secondAttribute="centerX" id="FRW-hv-Ngd"/>
+                            <constraint firstAttribute="centerY" secondItem="zgh-jl-1ef" secondAttribute="centerY" id="Ynm-Zi-JDj"/>
+                            <constraint firstAttribute="centerX" secondItem="ub2-ML-NKo" secondAttribute="centerX" constant="-0.5" id="jfH-Tt-hYe"/>
+                            <constraint firstAttribute="centerX" secondItem="ub2-ML-NKo" secondAttribute="centerX" constant="-0.5" id="wTT-Ad-WXc"/>
+                            <constraint firstItem="j7h-1j-AjU" firstAttribute="top" secondItem="7Gg-bj-fV2" secondAttribute="bottom" constant="8" id="zaf-Jy-RoO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="zgh-jl-1ef" id="Xgo-of-BWm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bi6-J1-ja2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-573" y="136"/>
+            <point key="canvasLocation" x="-1213" y="148"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="jA1-l5-ICI">
+            <objects>
+                <viewController id="OFW-yS-GdD" customClass="MainViewController" customModule="widgettest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Qa-o9-kPB"/>
+                        <viewControllerLayoutGuide type="bottom" id="2YL-Hr-v4k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wca-i6-zEo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbo-Nx-E7Z">
+                                <rect key="frame" x="115" y="156" width="370" height="99"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="77"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The lest day of life" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Dr-4Y-YQ4">
+                                <rect key="frame" x="150" y="86" width="300" height="56"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="1Dr-4Y-YQ4" secondAttribute="centerX" id="Lwt-0z-vkX"/>
+                            <constraint firstAttribute="centerX" secondItem="Cbo-Nx-E7Z" secondAttribute="centerX" id="UfW-0M-HsV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lestDayLabel" destination="Cbo-Nx-E7Z" id="FaY-gN-Fla"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fU6-n5-a9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-545" y="142"/>
         </scene>
     </scenes>
 </document>
