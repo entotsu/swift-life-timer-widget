@@ -24,7 +24,8 @@ class TodayViewController: UIViewController {
     }
     func updateTextLabel() {
         let defaults:NSUserDefaults = NSUserDefaults(suiteName: "group.widgets")
-        mylabel.text = defaults.stringForKey("textValue")
+        println(defaults.stringForKey("textValue"))
+        mylabel.text = "20075"
     }
     
     override func viewDidLoad() {
